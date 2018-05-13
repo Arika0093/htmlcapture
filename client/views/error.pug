@@ -1,0 +1,30 @@
+html
+	head
+		title Error
+		style.
+			#__bs_notify__ {
+				display: none !important;
+			}
+	body
+		h2#err
+		p#err_m
+	script.
+		var qparse = function(text, sep, eq, isDecode){
+			text = text || location.search.substr(1);
+			sep = sep || '&';
+			eq = eq || '=';
+			isDecode = isDecode === undefined ? true : isDecode;
+			var decode = (isDecode) ? decodeURIComponent : function(a){
+				return a;
+			};
+			return text.split(sep).reduce(function(obj, v){
+				var pair = v.split(eq);
+				obj[pair[0]] = decode(pair[1]);
+				return obj;
+			}, {});
+		};
+		var err_obj = qparse();
+		document.getElementById("err").textContent = err_obj.err;
+		document.getElementById("err_m").textContent = err_obj.err_m;
+		
+		

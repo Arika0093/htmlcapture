@@ -1,0 +1,37 @@
+extends .layout/layout
+
+block title
+	title TopPage
+	
+block content
+	main
+		div.container
+			div.row
+				div.col-md-4.mb-3
+					.form-group
+						label(for="siteurl") Capture URL
+						input.form-control#siteurl(type="text" placeholder="https://example.com")
+					.form-row
+						.form-group.col-sm-6
+							label(for="w_width") Window Width
+							input.form-control#w_width(type="number" placeholder="800")
+						.form-group.col-sm-6
+							label(for="w_height") Window Height
+							input.form-control#w_height(type="number" placeholder="600")
+					.form-row
+						.form-group.col-sm-6
+							label(for="siteurl") Capture DOM Selector
+							input.form-control#c_dom(type="text" placeholder="")
+							small.form-text.text-muted example: "#contents-01"
+						.form-group.col-sm-6
+							label(for="waiting") Waiting (ms)
+							input.form-control#waiting(type="number" placeholder="1000")
+							small.form-text.text-muted wait after load-finish
+					.form-group.form-check
+						input.form-check-input#isfullpage(type="checkbox")
+						label.form-check-label(for="isfullpage") Full-Capture
+					button#captureStart.btn.btn-primary Capture It!
+							
+				div.figure.col-md-8
+					div#capcaption
+					img.noimage#capImage(src="/image/noimage.png")

@@ -1,0 +1,72 @@
+
+<html>
+  <head>
+    <title>TopPage</title>
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"/>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/style.css"/>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4"><a class="navbar-brand" href="/"><i class="fas fa-camera"></i></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        </ul>
+        <ul class="navbar-nav flex-row ml-md-auto d-md-flex">
+          <li class="nav-item"><a class="nav-link" href="https://github.com/Arika0093/htmlcapture"><i class="fab fa-github fonticon-caption"></i>Github</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="text-center pt-2 pb-4" id="topHeader">
+      <h1><i class="fas fa-camera fonticon-caption"></i>Html Capture</h1>
+      <p class="lead">It provides a simple way to image HTML pages.</p>
+    </div>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <div class="form-group">
+              <label for="siteurl">Capture URL</label>
+              <input class="form-control" id="siteurl" type="text" placeholder="https://example.com"/>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-sm-6">
+                <label for="w_width">Window Width</label>
+                <input class="form-control" id="w_width" type="number" placeholder="800"/>
+              </div>
+              <div class="form-group col-sm-6">
+                <label for="w_height">Window Height</label>
+                <input class="form-control" id="w_height" type="number" placeholder="600"/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-sm-6">
+                <label for="siteurl">Capture DOM Selector</label>
+                <input class="form-control" id="c_dom" type="text" placeholder=""/><small class="form-text text-muted">example: "#contents-01"</small>
+              </div>
+              <div class="form-group col-sm-6">
+                <label for="waiting">Waiting (ms)</label>
+                <input class="form-control" id="waiting" type="number" placeholder="1000"/><small class="form-text text-muted">wait after load-finish</small>
+              </div>
+            </div>
+            <div class="form-group form-check">
+              <input class="form-check-input" id="isfullpage" type="checkbox"/>
+              <label class="form-check-label" for="isfullpage">Full-Capture</label>
+            </div>
+            <button class="btn btn-primary" id="captureStart">Capture It!</button>
+          </div>
+          <div class="figure col-md-8">
+            <div id="capcaption"></div><img class="noimage" id="capImage" src="/image/noimage.png"/>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+    <script src="/javascript/bundle.js"></script>
+  </body>
+</html>

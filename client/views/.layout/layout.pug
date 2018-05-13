@@ -1,0 +1,39 @@
+html
+	head
+		block title
+		meta(name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1")
+		//-meta(name="robots" content="noindex,nofollow")
+		include ../.includes/style
+	body
+		nav.navbar.navbar-expand-md.navbar-dark.bg-dark.mb-4
+			a.navbar-brand(href='/')
+				i.fas.fa-camera
+			button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarCollapse', aria-controls='navbarCollapse', aria-expanded='false', aria-label='Toggle navigation')
+				span.navbar-toggler-icon
+			#navbarCollapse.collapse.navbar-collapse
+				ul.navbar-nav.mr-auto
+					li.nav-item
+						a.nav-link(href='/') Home
+					//-li.nav-item
+						a.nav-link(href='/howto/') How to Use
+					//-li.nav-item
+						a.nav-link(href='/api/') API
+				ul.navbar-nav.flex-row.ml-md-auto.d-md-flex
+					li.nav-item
+						a.nav-link(href='https://github.com/Arika0093/htmlcapture')
+							i.fab.fa-github.fonticon-caption
+							| Github
+
+		div#topHeader.text-center.pt-2.pb-4
+			h1
+				i.fas.fa-camera.fonticon-caption
+				| Html Capture
+			p.lead
+				| It provides a simple way to image HTML pages.
+			
+		//-hr.mt-0.mb-4
+		
+		block content
+				
+		include ../.includes/scripts
+	
